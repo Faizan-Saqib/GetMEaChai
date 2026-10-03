@@ -1,18 +1,15 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function PaymentCancel() {
-  const searchParams =
-    useSearchParams();
-
-  const tracker =
-    searchParams.get("tracker");
+function PaymentCancelContent() {
+  const searchParams = useSearchParams();
+  const tracker = searchParams.get("tracker");
 
   return (
     <main className="min-h-screen bg-slate-950 flex items-center justify-center px-6">
       <div className="w-full max-w-md rounded-3xl bg-slate-800 p-8 text-center">
-
         <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-red-500/20">
           <span className="text-3xl text-red-400">
             ×
@@ -24,8 +21,7 @@ export default function PaymentCancel() {
         </h1>
 
         <p className="mt-3 text-slate-400">
-          Your payment was cancelled or
-          could not be completed.
+          Your payment was cancelled or could not be completed.
         </p>
 
         {tracker && (
@@ -40,8 +36,15 @@ export default function PaymentCancel() {
         >
           Go Back
         </a>
-
       </div>
     </main>
+  );
+}
+
+export default function PaymentCancel() {
+  return (
+    <Suspense fallback={null}>
+      <PaymentCancelContent />
+    </Suspense>
   );
 }
