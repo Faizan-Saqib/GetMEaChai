@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className="flex justify-between items-center p-4 bg-gray-700 text-white">
       <Link href="/" className="logo font-bold text-2xl flex justify-center items-center ">
         <div className="img"><img className='h-12 w-12' src="/tea.gif" alt="logo" /></div>
-        <h1>GetMEaChai</h1>
+        <h1>GetMEaPie</h1>
       </Link>
       
       <div className='flex gap-4'>
