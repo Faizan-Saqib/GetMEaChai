@@ -224,7 +224,7 @@ transition={Bounce}
           </div>
 
           <div className="text-gray-500 text-md">
-            Lets help {username} get a chai!
+            Lets help {username} get a Pie!
           </div>
 
           <div className="text-gray-500 text-md">
